@@ -1,0 +1,33 @@
+{
+  "name": "quales course management-app-e2e-tests",
+  "version": "2.2.0",
+  "description": "This project is to test features on the quales course management web client.",
+  "main": "index.js",
+  "scripts": {
+    "test:locally:headless": "npx cypress run",
+    "open:execution:window:locally": "npx cypress open",
+    "test": "npx cypress run --record --key 80a0e17e-3379-4812-bf1f-55e0805896ee",
+    "cypress:runner": "cypress open --e2e --browser chrome",
+    "cypress:execution": "cypress run --spec cypress/e2e/features/*",
+    "cypress:execution-tags": "cypress run --env tags=@mobile",
+    "cypress:execution-allure": "cypress run --env allure=true",
+    "allure:clear": "rm -r allure-results/ allure-report cypress/screenshots || true",
+    "allure:report": "allure generate allure-results --clean -o allure-report",
+    "allure:history": "mv -f allure-report/history allure-results/history && rm -r allure-report || true"
+  },
+  "keywords": [
+    "cypress",
+    "cucumber"
+  ],
+  "author": "Ayobami Elutade",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "@shelex/cypress-allure-plugin": "^2.34.0",
+    "cypress": "^13.10.0",
+    "cypress-xpath": "^2.0.1",
+    "esbuild": "^0.16.4",
+    "multiple-cucumber-html-reporter": "^3.0.1"
+  }
+}
