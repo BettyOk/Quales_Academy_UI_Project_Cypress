@@ -5,6 +5,8 @@ This test aims to confirm that the login functionality is working as expected.
 Background: users need to be present in the quales edu library app to login
 
 #The Given syntax is a pre-requisite for the test
+#The When syntax is the action that the user takes
+#The Then syntax is the expected outcome of the action
 
 Given A user is at the quales edu library Login page
 
