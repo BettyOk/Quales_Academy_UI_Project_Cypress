@@ -22,9 +22,11 @@ async function setupNodeEvents(on, config) {
 
 module.exports = defineConfig({
   e2e: {
+    viewportWidth: 1000,
+    viewportHeight: 660,
     setupNodeEvents,
     specPattern: "cypress/e2e/features/*.feature",
-    baseUrl: "https://academy.quales.tech/",
+    baseUrl: "https://parabank.parasoft.com/parabank",
     chromeWebSecurity: false,
     env: {
       allureReuseAfterSpec: true,
@@ -33,5 +35,6 @@ module.exports = defineConfig({
       runMode: 1,
       openMode: 1,
     },
+    fixturesFolder: "cypress/e2e/features/cypress/fixtures", // Updated path for fixtures
   },
 });

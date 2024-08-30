@@ -1,7 +1,7 @@
 {
-  "name": "quales course management-app-e2e-tests",
+  "name": "parabank-tests",
   "version": "2.2.0",
-  "description": "This project is to test features on the quales course management web client.",
+  "description": "This project is to test features on the parabank web client.",
   "main": "index.js",
   "scripts": {
     "test:locally:headless": "npx cypress run",
@@ -19,15 +19,19 @@
     "cypress",
     "cucumber"
   ],
-  "author": "Ayobami Elutade",
+  "author": "Betty Okwedadi",
   "license": "ISC",
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.0.1",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
     "@shelex/cypress-allure-plugin": "^2.34.0",
     "cypress": "^13.10.0",
+    "cypress-file-upload": "^5.0.8",
     "cypress-xpath": "^2.0.1",
     "esbuild": "^0.16.4",
     "multiple-cucumber-html-reporter": "^3.0.1"
+  },
+  "dependencies": {
+    "uuid": "^10.0.0"
   }
 }
